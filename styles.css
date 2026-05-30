@@ -1,14 +1,14 @@
 :root {
-  --brand: #8c7a66;
-  --brand-dark: #3f362e;
-  --brand-blue: #4e463d;
-  --brand-gold: #c8b08d;
-  --ink: #302923;
-  --muted: #80756c;
-  --line: #e7e1da;
-  --soft: #f8f6f2;
+  --brand: #244136;
+  --brand-dark: #152a23;
+  --brand-blue: #244136;
+  --brand-gold: #c9b589;
+  --ink: #1f2d28;
+  --muted: #6f7a73;
+  --line: #e4e9e4;
+  --soft: #f7f9f6;
   --paper: #ffffff;
-  --warning: #fbf5e8;
+  --warning: #f8f4e8;
 }
 
 * {
@@ -19,7 +19,7 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(180deg, #fbfaf7 0%, #f5f1ea 48%, #eee8df 100%);
+    linear-gradient(180deg, #ffffff 0%, #f7f9f6 46%, #edf3ef 100%);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -28,10 +28,10 @@ body {
   grid-template-columns: auto minmax(560px, 1fr) auto;
   align-items: center;
   gap: clamp(18px, 2.4vw, 34px);
-  padding: 18px clamp(18px, 3vw, 48px);
+  padding: 16px clamp(18px, 3vw, 48px);
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 10px 30px rgba(48, 41, 35, 0.06);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(21, 42, 35, 0.06);
 }
 
 .brand {
@@ -46,10 +46,10 @@ body {
   height: 54px;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 0;
   background: #fff;
-  border: 1px solid rgba(140, 122, 102, 0.18);
-  box-shadow: 0 8px 22px rgba(48, 41, 35, 0.08);
+  border: 0;
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -67,6 +67,7 @@ body {
 
 .brand strong {
   color: var(--brand-dark);
+  font-weight: 700;
 }
 
 .brand span,
@@ -94,7 +95,7 @@ body {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  color: #8c8781;
+  color: #68736d;
   font-size: 14px;
   font-weight: 500;
   line-height: 1;
@@ -113,18 +114,18 @@ body {
   align-items: center;
   justify-content: center;
   width: 14px;
-  color: #d4ccc4;
+  color: #cbd5ce;
   font-size: 23px;
   line-height: 1;
   user-select: none;
 }
 
 .shelf-arrow-left {
-  color: #e6dfd8;
+  color: #dbe4de;
 }
 
 .shelf-arrow-right {
-  color: #d4ccc4;
+  color: #cbd5ce;
 }
 
 .category-shelf span {
@@ -136,17 +137,17 @@ body {
   gap: 3px;
   min-width: 168px;
   padding: 12px 18px;
-  border: 1px solid rgba(63, 54, 46, 0.22);
-  border-radius: 8px;
+  border: 1px solid rgba(21, 42, 35, 0.2);
+  border-radius: 4px;
   color: #fff;
-  background: linear-gradient(180deg, #5d5146 0%, var(--brand-dark) 100%);
-  box-shadow: 0 12px 24px rgba(63, 54, 46, 0.18);
+  background: var(--brand-dark);
+  box-shadow: 0 12px 24px rgba(21, 42, 35, 0.18);
   text-decoration: none;
   text-align: center;
 }
 
 .site-link span {
-  color: #f0dfc3;
+  color: #d8c79e;
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
@@ -160,8 +161,25 @@ body {
 
 .site-link:hover {
   transform: translateY(-1px);
-  background: linear-gradient(180deg, #6d5e50 0%, #2f2822 100%);
-  box-shadow: 0 16px 32px rgba(63, 54, 46, 0.26);
+  background: #203c32;
+  box-shadow: 0 16px 32px rgba(21, 42, 35, 0.26);
+}
+
+.brand-strip {
+  display: flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 6vw, 86px);
+  padding: 7px 18px;
+  color: #fff;
+  background: var(--brand-dark);
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.brand-strip span {
+  white-space: nowrap;
 }
 
 main {
@@ -175,10 +193,10 @@ main {
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
   padding: clamp(24px, 5vw, 48px);
-  border: 1px solid rgba(36, 60, 114, 0.12);
-  border-radius: 8px;
+  border: 1px solid rgba(36, 65, 54, 0.14);
+  border-radius: 4px;
   background: var(--paper);
-  box-shadow: 0 18px 50px rgba(23, 33, 59, 0.09);
+  box-shadow: 0 18px 50px rgba(21, 42, 35, 0.08);
 }
 
 .eyebrow {
@@ -224,14 +242,14 @@ input {
   width: 100%;
   min-height: 48px;
   padding: 0 14px;
-  border: 1px solid #b9c4d0;
-  border-radius: 8px;
+  border: 1px solid #cfd8d1;
+  border-radius: 4px;
   color: var(--ink);
   font-size: 16px;
 }
 
 input:focus {
-  outline: 3px solid rgba(225, 38, 28, 0.16);
+  outline: 3px solid rgba(36, 65, 54, 0.14);
   border-color: var(--brand);
 }
 
@@ -239,22 +257,22 @@ button {
   min-height: 48px;
   padding: 0 18px;
   border: 0;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #fff;
-  background: linear-gradient(180deg, #2d4b89 0%, var(--brand-blue) 100%);
+  background: var(--brand-dark);
   font-size: 15px;
   font-weight: 800;
   cursor: pointer;
 }
 
 button:hover {
-  background: #1b2f5f;
+  background: #203c32;
 }
 
 button.secondary {
-  color: var(--brand-blue);
+  color: var(--brand-dark);
   background: var(--brand-gold);
-  border: 1px solid #e9b936;
+  border: 1px solid #bda678;
 }
 
 button.secondary:hover {
@@ -270,7 +288,7 @@ button.secondary:hover {
   margin: 18px 0;
   padding: 14px 16px;
   border: 1px solid #f1c06d;
-  border-radius: 8px;
+  border-radius: 4px;
   background: var(--warning);
   font-weight: 700;
 }
@@ -289,18 +307,18 @@ button.secondary:hover {
 
 .status.recovery {
   padding: 0;
-  border-color: rgba(215, 25, 32, 0.18);
-  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
+  border-color: rgba(36, 65, 54, 0.16);
+  background: #fff;
   color: var(--ink);
-  box-shadow: 0 16px 44px rgba(23, 33, 59, 0.09);
+  box-shadow: 0 16px 44px rgba(21, 42, 35, 0.08);
 }
 
 .status.connection {
   padding: 0;
-  border-color: rgba(36, 60, 114, 0.18);
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border-color: rgba(36, 65, 54, 0.16);
+  background: #fff;
   color: var(--ink);
-  box-shadow: 0 16px 44px rgba(23, 33, 59, 0.09);
+  box-shadow: 0 16px 44px rgba(21, 42, 35, 0.08);
 }
 
 .recovery-card {
@@ -325,10 +343,10 @@ button.secondary:hover {
   min-height: 72px;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 4px;
   background: #fff;
-  border: 1px solid rgba(215, 25, 32, 0.14);
-  box-shadow: inset 0 -4px 0 rgba(247, 201, 72, 0.34);
+  border: 1px solid rgba(36, 65, 54, 0.14);
+  box-shadow: inset 0 -4px 0 rgba(201, 181, 137, 0.32);
 }
 
 .connection-logo {
@@ -337,10 +355,10 @@ button.secondary:hover {
   min-height: 58px;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 4px;
   background: #fff;
-  border: 1px solid rgba(36, 60, 114, 0.14);
-  box-shadow: inset 0 -4px 0 rgba(247, 201, 72, 0.34);
+  border: 1px solid rgba(36, 65, 54, 0.14);
+  box-shadow: inset 0 -4px 0 rgba(201, 181, 137, 0.32);
 }
 
 .recovery-logo img {
@@ -368,12 +386,12 @@ button.secondary:hover {
 }
 
 .recovery-message strong {
-  color: var(--brand-blue);
+  color: var(--brand-dark);
   font-size: 18px;
 }
 
 .connection-message strong {
-  color: var(--brand-blue);
+  color: var(--brand-dark);
   font-size: 18px;
 }
 
@@ -1445,6 +1463,12 @@ td {
     min-width: 0;
   }
 
+  .brand-strip {
+    justify-content: start;
+    gap: 22px;
+    overflow-x: auto;
+  }
+
   .search-panel,
   .field-row {
     grid-template-columns: 1fr;
@@ -1484,6 +1508,7 @@ td {
   }
 
   .topbar,
+  .brand-strip,
   .search-panel,
   .actions {
     display: none !important;
