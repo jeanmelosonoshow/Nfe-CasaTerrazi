@@ -137,6 +137,7 @@ function parseNfe(xmlText) {
     return {
       code: text(prod, "cProd"),
       description: text(prod, "xProd"),
+      additionalInfo: text(det, "infAdProd"),
       ncm: text(prod, "NCM"),
       cst: [text(icmsNode, "orig"), text(icmsNode, "CST") || text(icmsNode, "CSOSN")].filter(Boolean).join(""),
       cfop: text(prod, "CFOP"),
@@ -311,7 +312,10 @@ function buildDanfePage(data, items, { continuation, finalPage }) {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${escapeHtml(item.code)}</td>
-      <td>${escapeHtml(item.description)}</td>
+      <td>
+        <span class="product-description-main">${escapeHtml(item.description)}</span>
+        ${item.additionalInfo ? `<span class="product-additional-info">${escapeHtml(item.additionalInfo)}</span>` : ""}
+      </td>
       <td>${escapeHtml(item.ncm)}</td>
       <td>${escapeHtml(item.cst)}</td>
       <td>${escapeHtml(item.cfop)}</td>
@@ -434,6 +438,7 @@ function renderNfce(data) {
     row.className = "nfce-product";
     row.innerHTML = `
       <strong>${escapeHtml(item.description)}</strong>
+      ${item.additionalInfo ? `<span class="product-additional-info">${escapeHtml(item.additionalInfo)}</span>` : ""}
       <em>(Código: ${escapeHtml(item.code)} )</em>
       <span>Qtde.:${escapeHtml(item.quantity)} UN: ${escapeHtml(item.unit)} Vl. Unit.: ${escapeHtml(decimalFromMoney(item.unitValue))} Vl. Total ${escapeHtml(decimalFromMoney(item.total))}</span>
     `;

@@ -1415,6 +1415,18 @@ td {
   line-height: 1.12;
 }
 
+.product-description-main,
+.product-additional-info {
+  display: block;
+}
+
+.product-additional-info {
+  margin-top: 0.6mm;
+  font-size: 0.92em;
+  line-height: 1.12;
+  font-weight: 400;
+}
+
 @media (max-width: 760px) {
   .topbar,
   .field-row,
